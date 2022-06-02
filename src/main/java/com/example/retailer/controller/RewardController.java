@@ -28,6 +28,11 @@ public class RewardController {
         this.customerService = customerService;
     }
 
+    @GetMapping("")
+    public String welcome() {
+        return "Welcome to point reward service";
+    }
+
     @GetMapping("/rewards")
     public ResponseEntity<List<RewardPoint>> getAllMonthlyRewards() {
         log.info("get all rewards");
